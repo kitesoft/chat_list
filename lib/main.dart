@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'views/chat_list.dart';
 
 void main() => runApp(ChatListApp());
 
@@ -85,7 +86,9 @@ class _MyHomePageState extends State<_MyHomePage> {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
-          children: <Widget>[],
+          children: <Widget>[
+            ChatList(),
+          ],
         ),
       ),
       //   floatingActionButton: FloatingActionButton(
