@@ -1,4 +1,8 @@
 analyzer:
+
+  language:
+    enableSuperMixins: true
+
   strong-mode:
     implicit-casts: false
     implicit-dynamic: false
@@ -33,8 +37,6 @@ analyzer:
     use_string_buffers: warning
     use_to_and_as_if_applicable: warning
     void_checks: error
-  plugins:
-    - angular
 
 # Lint rules and documentation, see http://dart-lang.github.io/linter/lints
 linter:
