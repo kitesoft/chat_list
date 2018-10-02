@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 
-class ChatList extends StatefulWidget {
+import 'widgets/chat_list_item.dart';
+
+class ChatListView extends StatefulWidget {
   @override
-  ChatListState createState() {
-    return ChatListState();
+  ChatListViewState createState() {
+    return ChatListViewState();
   }
 }
 
-class ChatListState extends State<ChatList> with TickerProviderStateMixin {
+class ChatListViewState extends State<ChatListView> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -66,29 +68,20 @@ class ChatListState extends State<ChatList> with TickerProviderStateMixin {
         ListView(
           shrinkWrap: true,
           children: <Widget>[
-            ListTile(
-              leading: CircleAvatar(
-                radius: 20.0,
-                backgroundImage: AssetImage('assets/profile.png'),
-              ),
-              title: Row(
-                children: <Widget>[
-                  Text('Dinesh Ahuja'),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 4.0),
-                    child: CircleAvatar(
-                      radius: 10.0,
-                      child: Text('3'),
-                    ),
-                  )
-                ],
-              ),
-              subtitle: Text('Lorem ipsum'),
-              trailing: Text('a moment ago'),
-            )
+            ChatListItemWidget(),
           ],
         ),
       ],
     );
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+  }
+
+  @override
+  void initState() {
+    super.initState();
   }
 }
