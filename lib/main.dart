@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'views/chat_list.dart';
 
 void main() => runApp(ChatListApp());
@@ -19,9 +20,9 @@ class ChatListApp extends StatelessWidget {
 }
 
 class _MyHomePage extends StatefulWidget {
-  const _MyHomePage({Key key, this.title}) : super(key: key);
-
   final String title;
+
+  const _MyHomePage({Key key, this.title}) : super(key: key);
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
@@ -87,7 +88,7 @@ class _MyHomePageState extends State<_MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
-            ChatList(),
+            ChatListView(),
           ],
         ),
       ),
